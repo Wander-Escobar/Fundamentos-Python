@@ -1,19 +1,15 @@
 print('Comparando números, qual é maior ?\n')
 
-while True:
-    num1 = input('Digite o primeiro número: ')
-    num2 = input('Digite o segundo número: ')
+num = []
 
-    try:
-        num1 = int(num1)
-        num2 = int(num2)
-        break
-    except ValueError:
-        print('\nOpção inválida! Digite novamente a opção desejada!')
+for i in range(1,6):
+    valor = int(input(f'Digite o {i}º número: '))
+    num.append(valor)
 
-if num1 < num2:    
-    print('\nO SEGUNDO valor é maior')
-if num1 > num2:
-    print('\nO PRIMEIRO valor é maior ')
-else:
-    print('\nOs dois valores são IGUAIS\n')
+print(f'\nOs números digitados foram: {num}')
+
+print(f'\nO menor número digitado é {min(num)}')
+print(f'O maior número digitado é {max(num)}\n')
+
+print(f'Os numeros digitados em ordem crescente foram: \n{sorted(num)}\n')
+print(f'Os números digitados em ordem decrescente são: \n{sorted(num, reverse=True)}')
